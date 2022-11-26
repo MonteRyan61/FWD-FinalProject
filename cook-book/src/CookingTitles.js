@@ -11,10 +11,7 @@ export default class form extends React.Component{
 
     render(){
         return(
-            <div className="Main-header">
-                <h1>{this.state.Header}</h1>
-                <Search />
-            </div>
+            <p>Recipes will be here</p>
         );
     }
 }
