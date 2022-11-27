@@ -1,17 +1,22 @@
 import React from "react";
-
+import './CookingTitles.css';
 export default class form extends React.Component{
     constructor(props){
         super(props);
-
+        
         this.state = {
             Header: 'College Cook',
         };
     }
 
-    render(){
-        return(
-            <p>Recipes will be here</p>
+    render() {
+        const data =[{"name":"Chicken Casserole"},{"name":"Chicken Parmesan"}];
+        return (
+          <div className="Recipe">
+          {data.map(function(d, idx){
+             return (<li key={idx}>{d.name}</li>)
+           })}
+          </div>
         );
     }
 }
