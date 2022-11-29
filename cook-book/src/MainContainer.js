@@ -2,6 +2,9 @@ import React from "react";
 import './MainContainer.css';
 import Search from "./Search";
 import CookingTitles from "./CookingTitles";
+// import Flex from "./flexbox";
+
+
 export default class form extends React.Component{
     constructor(props){
         super(props);
@@ -16,7 +19,12 @@ export default class form extends React.Component{
             <div className="Main-header">
                 <h1>{this.state.Header}</h1>
                 <Search />
-                <CookingTitles />
+                <CookingTitles/>
+
+                {/* <div className= "Gallery">
+                    <flexbox/>
+                
+                </div> */}
             </div>
         );
     }
