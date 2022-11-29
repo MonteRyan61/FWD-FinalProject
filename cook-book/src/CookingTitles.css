@@ -1,8 +1,41 @@
 .Recipe{
     display: flex;
+    flex-flow:row wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
+
+
+.recipeItem{
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     background-color: rgb(193, 192, 192);
+    margin: 20px;
+    width: 27%;
+
+
+    border-radius: 10%;
+}
+
+.recipeTitle{
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2vw;
+    background-color: rgb(193, 192, 192);
+}
+
+
+.recipeImg{
+    height: auto;
+    max-width: 100%;
+    border-radius: 10%;
+}
+
+
+#Casserole{
+    opacity: 10%;
 }
