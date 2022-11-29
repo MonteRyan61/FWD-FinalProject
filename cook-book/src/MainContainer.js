@@ -2,10 +2,10 @@ import React from "react";
 import './MainContainer.css';
 import Search from "./Search";
 import CookingTitles from "./CookingTitles";
-// import Flex from "./flexbox";
+import Ingredents from "./ingredents";
 
 
-export default class form extends React.Component{
+export default class MainContainer extends React.Component{
     constructor(props){
         super(props);
 
@@ -20,6 +20,7 @@ export default class form extends React.Component{
                 <h1>{this.state.Header}</h1>
                 <Search />
                 <CookingTitles/>
+                <Ingredents/>
 
                 {/* <div className= "Gallery">
                     <flexbox/>
