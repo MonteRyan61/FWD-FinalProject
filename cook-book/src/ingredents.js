@@ -8,9 +8,10 @@ export default class form extends React.Component{
                 Image:'',
                 ingred:'',
         };
-        changeRecipe = () => {
-            this.setState({RecipeName: "Chicken Cassorle"});
-          }
+        // changeRecipe = () => {
+        //     this.setState({RecipeName: "Chicken Cassorle"});
+
+        //   }
     }
     render() {
         const data =[{"ingredents":"4 skinless, boneless chicken breast halves"},{"ingredents":"1 (10.5 ounce) can condensed cream of chicken soup"},{"ingredents":"1 cup sour cream"},{"ingredents":"¼ cup chopped mushrooms"},{"ingredents":"¼ cup chopped onion"},{"ingredents":"32 buttery round crackers, crumbled"}];
