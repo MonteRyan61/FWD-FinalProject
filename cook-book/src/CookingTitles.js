@@ -37,7 +37,6 @@ export default class CookingTitles extends React.Component{
         return(
   
             <div>
-                <img onClick={()=> setToggle(!toggle)} img="Images/ChickenParm573x322.png">Toggle State</img>
 
                 {/* <img
             className="active"
@@ -47,7 +46,6 @@ export default class CookingTitles extends React.Component{
           /> */}
               
               {!toggle &&(
-        
                 <Ingredents></Ingredents>
               )}
               {toggle &&(
@@ -60,7 +58,6 @@ export default class CookingTitles extends React.Component{
                 </div>
         )}
         return (
-
           <div className="Recipe">
           {data.map(function(item){
             return (<div className="recipeItem" id={item.id}>
