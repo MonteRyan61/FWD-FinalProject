@@ -1,10 +1,11 @@
 import React, {useState} from "react";
 import './MainContainer.css';
-import Search from "./Search";
 import CookingTitles from "./CookingTitles";
 import Ingredents from "./ingredents";
+import Search from "./Search";
 
 
+///
 const ExampleContainer = () => { 
 
 const [toggle,setToggle]= useState(true)
