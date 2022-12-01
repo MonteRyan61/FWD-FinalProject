@@ -1,18 +1,17 @@
 import React, {useState} from "react";
-import './MainContainer.css';
 import CookingTitles from "./CookingTitles";
 import Ingredents from "./ingredents";
 import Search from "./Search";
-
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import './MainContainer.css';
 ///
 const ExampleContainer = () => { 
 
 const [toggle,setToggle]= useState(true)
 
 return(
-  
-    <div>
+    <div className="Main-Container">
+      <h1 className="Main-header">College Cook</h1>
         <button onClick={()=> setToggle(!toggle)} className="btn btn-primary mb-5">Toggle State</button>
       
       {!toggle &&(
@@ -26,6 +25,6 @@ return(
       {toggle && (
         <CookingTitles></CookingTitles>
        )}
-        </div>
+    </div>
 )}
 export default ExampleContainer;

@@ -7,10 +7,11 @@ import CookingTitles from './CookingTitles';
 
 function App() {
   return(
-        // <MainContainer/>
+        
         <div className='App'>
-        {/* <ExampleContainer/> */}
-        <CookingTitles/>
+        {/* <MainContainer/> */}
+        <ExampleContainer/>
+        
         </div>
         
   );
