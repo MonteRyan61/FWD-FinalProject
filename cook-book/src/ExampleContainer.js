@@ -18,10 +18,8 @@ const childToParent = (childdata) => {
 return(
     <div className="Main-Container">
       <h1 className="Main-header">College Cook</h1>
-        <button onClick={()=> setToggle(!toggle)} className="btn btn-primary mb-5">Toggle State</button>
-        <div>
-      </div>
-      {data2}
+        {/* <img onClick={()=> setToggle(!toggle)} className="btn btn-primary mb-5">Toggle State</img> */}
+      
       {!toggle &&(
         <Ingredents test={data2}></Ingredents>
       )}
