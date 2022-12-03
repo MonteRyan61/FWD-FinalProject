@@ -7,23 +7,29 @@ import './MainContainer.css';
 ///
 const ExampleContainer = () => { 
 
-const [toggle,setToggle]= useState(true)
+const [toggle,setToggle]= useState(true);
+
+const [data2, setData2] = useState('');
+
+const childToParent = (childdata) => {
+  setData2(childdata);
+}
 
 return(
     <div className="Main-Container">
       <h1 className="Main-header">College Cook</h1>
         <button onClick={()=> setToggle(!toggle)} className="btn btn-primary mb-5">Toggle State</button>
-      
+        <div>
+      </div>
+      {data2}
       {!toggle &&(
-
-        <Ingredents></Ingredents>
+        <Ingredents test={data2}></Ingredents>
       )}
       {toggle &&(
         <Search></Search>
        )}
-
       {toggle && (
-        <CookingTitles></CookingTitles>
+        <CookingTitles childToParent={childToParent}></CookingTitles>
        )}
     </div>
 )}
