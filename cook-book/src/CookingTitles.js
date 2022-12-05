@@ -10,14 +10,14 @@ constructor() {
         this.data = {
           recipeTitlesAndImages : [
             {"name":"Chicken Casserole", "img":"Images/ChickenCasserole573x318.png", "id": "0"},
-            {"name":"Chicken Parmesan1", "img":"Images/ChickenParm573x322.png", "id": "1"},
+            {"name":"Chicken Parmesan", "img":"Images/ChickenParm573x322.png", "id": "1"},
             {"name":"Chicken Pie", "img":"Images/chickenpie.jpg", "id": "2"},
-            {"name":"Chicken Parmesan3", "img":"Images/ChickenParm573x322.png", "id": "3"},
-            {"name":"Chicken Parmesan4", "img":"Images/ChickenParm573x322.png", "id": "4"},
-            {"name":"Chicken Parmesan5", "img":"Images/ChickenParm573x322.png", "id": "5"},
-            {"name":"Chicken Parmesan6", "img":"Images/ChickenParm573x322.png", "id": "6"},
-            {"name":"Chicken Parmesan7", "img":"Images/ChickenParm573x322.png", "id": "7"},
-            {"name":"Chicken Parmesan8", "img":"Images/ChickenParm573x322.png", "id": "8"},
+            {"name":"Bacon Breakfast Pizza", "img":"Images/BaconPizza.jpg", "id": "3"},
+            {"name":"Chicken Provolone", "img":"Images/ChickenProv.jpg", "id": "4"},
+            {"name":"Mac& Cheese", "img":"Images/Mac&Cheese.jpg", "id": "5"},
+            {"name":"Salsa Steak Garlic Toast", "img":"Images/SalsaSteak.jpg", "id": "6"},
+            {"name":"Waffle-Iron Pizzas", "img":"Images/WaffleIronPizza.jpg", "id": "7"},
+            {"name":"Carolina-Style Vinegar BBQ Chicken", "img":"Images/BBQChicken.jpg", "id": "8"},
             ]
 
         }
@@ -50,8 +50,13 @@ constructor() {
               <div className="Recipe">
                 {this.data.recipeTitlesAndImages.map((item) =>{
                   return (<div className="recipeItem" id={item.id}>
-                      <h1 className="recipeTitle">{item.name}</h1> 
-                      <button onClick={() => this.setToggle(item.id)}><img className="recipeImg" src= {item.img} alt="test"/></button>
+                      <h1 className="recipeTitle">{item.name}</h1>
+  
+                      <button onClick={() => this.setToggle(item.id)}>
+                        <img className="recipeImg" src= {item.img} alt="test"/>
+
+
+                      </button>
                       </div>)
                 })}
               </div>
@@ -60,3 +65,11 @@ constructor() {
         )
     }
 }
+
+
+// //{/* Overlay of Text */}
+// <div className='ImgOverlay'>
+// <div className='recipeItem' id={item.id}>
+// {/* Title Name */}
+// </div>
+// </div>

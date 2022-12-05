@@ -15,4 +15,16 @@
     height: auto;
     max-width: 100%;
     border-radius: 10%;
+
 }
+/* .recipeImg:hover{
+    opacity: 0.9;
+} */
+
+/* .ImgOverlay{
+    position:absolute;
+    top:0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color:#fff;
+} */
