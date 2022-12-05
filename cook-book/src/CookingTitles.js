@@ -14,7 +14,7 @@ constructor() {
             {"name":"Chicken Pie", "img":"Images/chickenpie.jpg", "id": "2"},
             {"name":"Bacon Breakfast Pizza", "img":"Images/BaconPizza.jpg", "id": "3"},
             {"name":"Chicken Provolone", "img":"Images/ChickenProv.jpg", "id": "4"},
-            {"name":"Mac& Cheese", "img":"Images/Mac&Cheese.jpg", "id": "5"},
+            {"name":"Mac & Cheese", "img":"Images/Mac&Cheese.jpg", "id": "5"},
             {"name":"Salsa Steak Garlic Toast", "img":"Images/SalsaSteak.jpg", "id": "6"},
             {"name":"Waffle-Iron Pizzas", "img":"Images/WaffleIronPizza.jpg", "id": "7"},
             {"name":"Carolina-Style Vinegar BBQ Chicken", "img":"Images/BBQChicken.jpg", "id": "8"},
