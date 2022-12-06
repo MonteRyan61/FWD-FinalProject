@@ -1,5 +1,6 @@
 
 import './CookingTitles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react'
 export default class CookingTitles extends React.Component {
 constructor() {
@@ -51,11 +52,8 @@ constructor() {
                 {this.data.recipeTitlesAndImages.map((item) =>{
                   return (<div className="recipeItem" id={item.id}>
                       <h1 className="recipeTitle">{item.name}</h1>
-  
-                      <button onClick={() => this.setToggle(item.id)}>
+                      <button className="btn btn-link" onClick={() => this.setToggle(item.id)}>
                         <img className="recipeImg" src= {item.img} alt="test"/>
-
-
                       </button>
                       </div>)
                 })}

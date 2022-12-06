@@ -8,7 +8,7 @@
 
 
 .TitleRecipe{
-    font-size: calc(4px + 2vmin);
+    font-size: calc(10px + 4.5vmin);
 }
 
 .recipeImg{
@@ -16,6 +16,15 @@
     max-width: 100%;
     border-radius: 10%;
 
+}
+
+.subHeader{
+    font-size: calc(10px + 4vmin);
+}
+
+.backButton{
+    align-items: left;
+    justify-content: left;
 }
 /* .recipeImg:hover{
     opacity: 0.9;
@@ -28,3 +37,10 @@
     background: rgba(0, 0, 0, 0.6);
     color:#fff;
 } */
+
+.list-group{
+    background-color: #C6AC8F;
+}
+.list-group-item{
+background-color: #d6ba9b;
+}

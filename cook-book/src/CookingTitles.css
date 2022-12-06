@@ -24,16 +24,16 @@
 .recipeTitle{
     align-items: center;
     justify-content: center;
-    font-size: 2.2vw;
+    font-size: 2vw;
     background-color: rgb(193, 192, 192);
     position: absolute;
     opacity: 0;
 }
+
 .recipeTitle:hover
 {
     position: absolute;
     opacity: 1;
-    background-color: white;
     /* background-color: transparent; */
     color:black;
 }
@@ -45,7 +45,3 @@
     border-radius: 10%;
 }
 
-
-#Casserole{
-    opacity: 10%;
-}

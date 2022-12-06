@@ -109,25 +109,27 @@ export default class form extends React.Component{
             <div className="Ingredients-Header"> 
             {console.log("Hi" + this.props.currRecipe)}
             {/* Load the name and image for the respective recipe */}
-            <button onClick={() => this.setToggle()}>Back</button>
             {this.data.RecipeKey[this.props.currRecipe].map((item, idx) => {
                 if(idx === 0)
                 {
-                    return (<h2 className="TitleRecipe">{item.name}</h2>)
+                    return (<h2 className="TitleRecipe"><button className="backButton btn btn-outline-secondary" onClick={() => this.setToggle()}>Back</button> {item.name}</h2>)
                 }
                 else{
                     return (<img className="recipeImg" src = {item.image} alt={item.image}/>)
                 }
             })}
             {/* Load the respective recipe ingredients */}
+            <h2 className="subHeader">Ingredients</h2>
+            <ul class="list-group">
             {this.data.RecipeKey[this.props.currRecipe].map((data, idx) => {
                 // Need to skip over the name and image in the list as the ingredients will be blank there 
                 const ingredient = data.ingredients
                 if(ingredient !== undefined)
                 {
-                    return (<li key={idx}>{ingredient}</li>)
+                    return (<li className="list-group-item" key={idx}>{ingredient}</li>)
                 }
             })}
+            </ul>
             </div>
         );
     }
