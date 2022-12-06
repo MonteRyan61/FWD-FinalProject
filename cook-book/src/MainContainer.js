@@ -15,12 +15,15 @@ export default class MainContainer extends React.Component{
         };
     }
 
+    // Creates a toggle for childData
     handleToggleCallback = (childData) =>{
         this.setState({toggle: childData})
     }
 
+    // Creates a toggle for Current Recipe 
     handleCurrRecipeCallback = (childData1) =>{
         console.log(childData1)
+        // takes in current recipe as a parameter for the toggle
         this.setState({currRecipe: childData1})
     }
 

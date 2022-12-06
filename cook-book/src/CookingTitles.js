@@ -24,16 +24,20 @@ constructor() {
 
         this.setToggle = this.setToggle.bind(this);
     }
-  
+  // sets a toggle and takes the id which is 0,1,2,3,4,5...8
   setToggle(id){
       console.log(this.state.toggle)
       console.log(id)
+      // If the state is true then toggle make the state when toggled false, then when this setstate is toggled again (else statement becomes true)
       if (this.state.toggle === true) {
         this.setState({
           toggle: false,
         })
+        // toggle false and makes parent false 
+        // toggle false and shows id of CurrentRecipecallback
         this.props.parentCallback(false);
         this.props.currRecipeCallback(id);
+        // 
     } else {
         this.setState(
             {
@@ -48,13 +52,15 @@ constructor() {
         return (
             <div>
               <div className="Recipe">
+                {/* Title and images are calling the item (which is the id) */}
                 {this.data.recipeTitlesAndImages.map((item) =>{
                   return (<div className="recipeItem" id={item.id}>
-                      <h1 className="recipeTitle">{item.name}</h1>
+                      
   
                       <button onClick={() => this.setToggle(item.id)}>
+                        <h1 className="recipeTitle">{item.name}</h1>
                         <img className="recipeImg" src= {item.img} alt="test"/>
-
+                        
 
                       </button>
                       </div>)

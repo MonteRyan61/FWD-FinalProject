@@ -91,13 +91,15 @@ export default class form extends React.Component{
                             ]
                     }   
 
-
+// have to bind to class when you make a function 
         this.setToggle = this.setToggle.bind(this);
     }
 
-
+// Sets toggle for the state in ingrednets. 
     setToggle(){
+        // for constructor toggle
         if (this.state.toggle === true) {
+            //main container toggle 
           this.props.parentCallback(false);
       } else {
           this.props.parentCallback(true);
@@ -107,15 +109,21 @@ export default class form extends React.Component{
     render() {
         return (
             <div className="Ingredients-Header"> 
+            {/* Loads name of Recipe */}
             {console.log("Hi" + this.props.currRecipe)}
             {/* Load the name and image for the respective recipe */}
+            {/* Toggles the setToggle State with the back button, parent Callback(false) else set to true */}
             <button onClick={() => this.setToggle()}>Back</button>
+            {/* Takes Recipe Key and takes the currRecipe toggle */}
+            {/* Item Is all the different items 1,2,3,4(the id's) */}
+            {/* idx is the index of all the different ingredents */}
             {this.data.RecipeKey[this.props.currRecipe].map((item, idx) => {
                 if(idx === 0)
                 {
                     return (<h2 className="TitleRecipe">{item.name}</h2>)
                 }
-                else{
+                // if item.image is undefined, 
+                else if(item.image !== undefined){
                     return (<img className="recipeImg" src = {item.image} alt={item.image}/>)
                 }
             })}
