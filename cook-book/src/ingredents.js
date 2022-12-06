@@ -16,6 +16,10 @@ export default class form extends React.Component{
                                 {"ingredients":"2 cups shredded Cheddar cheese (8 oz)"},
                                 {"ingredients":"3 cups of Progresso plain panko crispy bread crumbs"},
                                 {"ingredients":"6 tablespoons butter, melted"},
+                                {"steps":"Heat oven to 425°F. Prepare pie crusts as directed on box for Two-Crust Pie using 9-inch glass pie pan."},
+                                {"steps":"In 2-quart saucepan, melt butter over medium heat. Add onion; cook 2 minutes, stirring frequently, until tender. Stir in flour, salt and pepper until well blended. Gradually stir in broth and milk, cooking and stirring until bubbly and thickened."},
+                                {"steps":"Stir in chicken and mixed vegetables. Remove from heat. Spoon chicken mixture into crust-lined pan. Top with second crust; seal edge and flute. Cut slits in several places in top crust."},
+                                {"steps":"Bake 30 to 40 minutes or until crust is golden brown. During last 15 to 20 minutes of baking, cover crust edge with strips of foil to prevent excessive browning. Let stand 5 minutes before serving."},
                                 {"image":"Images/ChickenCasserole573x318.png"}],
                                 // 1
                                 [{"name":"Chicken Parmesan"},
@@ -25,6 +29,15 @@ export default class form extends React.Component{
                                 {"ingredients":"¼ cup chopped mushrooms"},
                                 {"ingredients":"¼ cup chopped onion"},
                                 {"ingredients":"32 buttery round crackers, crumbled"},
+                                {"steps": " Preheat an oven to 450 degrees F (230 degrees C)."},
+                                {"steps": " Place chicken breasts between two sheets of heavy plastic (resealable freezer bags work well) on a solid, level surface. Firmly pound chicken with the smooth side of a meat mallet to a thickness of 1/2-inch. Season chicken thoroughly with salt and pepper."},
+                                {"steps": "Beat eggs in a shallow bowl and set aside."},
+                                {"steps": "Mix bread crumbs and 1/2 cup Parmesan cheese in a separate bowl, set aside."},
+                                {"steps": "Place flour in a sifter or strainer; sprinkle over chicken breasts, evenly coating both sides."},
+                                {"steps": "Dip a flour-coated chicken breast in beaten eggs. Transfer breast to the bread crumb mixture, pressing crumbs into both sides. Repeat for each breast. Let chicken rest for 10 to 15 minutes."},
+                                {"steps": "Heat 1/2 inch olive oil in a large skillet on medium-high heat until it begins to shimmer. Cook chicken in the hot oil until golden, about 2 minutes per side. The chicken will finish cooking in the oven."},
+                                {"steps": "Transfer chicken to a baking dish. Top each breast with 2 tablespoons tomato sauce. Layer each chicken breast with equal amounts of mozzarella cheese, fresh basil, and provolone cheese. Sprinkle remaining Parmesan over top and drizzle each with 1/2 teaspoon olive oil."},
+                                {"steps": "Bake in the preheated oven until cheese is browned and bubbly and chicken breasts are no longer pink in the center, 15 to 20 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C)."},
                                 {"image":"Images/ChickenParm573x322.png"}],
                                 // 2
                                 [{"name":"Chicken Pie"},
@@ -91,13 +104,15 @@ export default class form extends React.Component{
                             ]
                     }   
 
-
+// have to bind to class when you make a function 
         this.setToggle = this.setToggle.bind(this);
     }
 
-
+// Sets toggle for the state in ingrednets. 
     setToggle(){
+        // for constructor toggle
         if (this.state.toggle === true) {
+            //main container toggle 
           this.props.parentCallback(false);
       } else {
           this.props.parentCallback(true);
@@ -107,14 +122,21 @@ export default class form extends React.Component{
     render() {
         return (
             <div className="Ingredients-Header"> 
+            {/* Loads name of Recipe */}
             {console.log("Hi" + this.props.currRecipe)}
             {/* Load the name and image for the respective recipe */}
+            <button onClick={() => this.setToggle()}>Back</button>
+            {/* Toggles the setToggle State with the back button, parent Callback(false) else set to true */}
+            {/* Takes Recipe Key and takes the currRecipe toggle */}
+            {/* Item Is all the different items 1,2,3,4(the id's) */}
+            {/* idx is the index of all the different ingredents */}
             {this.data.RecipeKey[this.props.currRecipe].map((item, idx) => {
                 if(idx === 0)
                 {
                     return (<h2 className="TitleRecipe"><button className="backButton btn btn-outline-secondary" onClick={() => this.setToggle()}>Back</button> {item.name}</h2>)
                 }
-                else{
+                // if item.image is undefined, 
+                else if(item.image !== undefined){
                     return (<img className="recipeImg" src = {item.image} alt={item.image}/>)
                 }
             })}

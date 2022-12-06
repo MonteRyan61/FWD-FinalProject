@@ -27,6 +27,7 @@
     font-size: 2vw;
     background-color: rgb(193, 192, 192);
     position: absolute;
+    padding:60px;
     opacity: 0;
 }
 
@@ -34,7 +35,8 @@
 {
     position: absolute;
     opacity: 1;
-    /* background-color: transparent; */
+    /* background-color: white; */
+    background-color: transparent;
     color:black;
 }
 
