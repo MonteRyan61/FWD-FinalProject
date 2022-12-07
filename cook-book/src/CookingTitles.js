@@ -7,28 +7,19 @@ constructor() {
         super();
         this.state = {
             toggle: true,
-        }
-        this.data = {
-          recipeTitlesAndImages : [
-            {"name":"Chicken Casserole", "img":"Images/ChickenCasserole573x318.png", "id": "0"},
-            {"name":"Chicken Parmesan", "img":"Images/ChickenParm573x322.png", "id": "1"},
-            {"name":"Chicken Pie", "img":"Images/chickenpie.jpg", "id": "2"},
-            {"name":"Bacon Breakfast Pizza", "img":"Images/BaconPizza.jpg", "id": "3"},
-            {"name":"Chicken Provolone", "img":"Images/ChickenProv.jpg", "id": "4"},
-            {"name":"Mac & Cheese", "img":"Images/Mac&Cheese.jpg", "id": "5"},
-            {"name":"Salsa Steak Garlic Toast", "img":"Images/SalsaSteak.jpg", "id": "6"},
-            {"name":"Waffle-Iron Pizzas", "img":"Images/WaffleIronPizza.jpg", "id": "7"},
-            {"name":"Carolina-Style Vinegar BBQ Chicken", "img":"Images/BBQChicken.jpg", "id": "8"},
-            ]
-
+            hover: false,
+            currentId: -1,
+            recipeTitlesAndImages : []
         }
 
+
+        this.setHover = this.setHover.bind(this);
         this.setToggle = this.setToggle.bind(this);
     }
+
+
   // sets a toggle and takes the id which is 0,1,2,3,4,5...8
   setToggle(id){
-      console.log(this.state.toggle)
-      console.log(id)
       // If the state is true then toggle make the state when toggled false, then when this setstate is toggled again (else statement becomes true)
       if (this.state.toggle === true) {
         this.setState({
@@ -49,16 +40,29 @@ constructor() {
       }
     }
 
+  setHover(statusOfHover, id){
+
+    this.setState(
+      {
+        hover: statusOfHover,
+        currentId: id
+      }
+    )
+  }
+
     render() {
+        
         return (
             <div>
               <div className="Recipe">
                 {/* Title and images are calling the item (which is the id) */}
-                {this.data.recipeTitlesAndImages.map((item) =>{
-                  return (<div className="recipeItem" id={item.id}>
-                      <h1 className="recipeTitle">{item.name}</h1>
-                      <button className="btn btn-link" onClick={() => this.setToggle(item.id)}>
-                        <img className="recipeImg" src= {item.img} alt="test"/>
+                {/* Kind of weird way to loop through to lists but at this point we are going with it. */}
+                {this.props.searchRecipe.map((recipeTitle, index) =>{
+                  const recipeImage = this.props.searchImg[index];
+                  return (<div className="recipeItem" id={index}>
+                      <button className="btn btn-outline-secondary" onClick={() => this.setToggle(index)} onMouseEnter={() => this.setHover(true, index)} onMouseLeave={() => this.setHover(false, index)}>
+                      {this.state.hover && (index === this.state.currentId) && <h1 className="recipeTitle">{recipeTitle}</h1>}
+                      <img className="recipeImg" src= {recipeImage} alt="test"/>
                       </button>
                       </div>)
                 })}
@@ -69,10 +73,11 @@ constructor() {
     }
 }
 
-
-// //{/* Overlay of Text */}
-// <div className='ImgOverlay'>
-// <div className='recipeItem' id={item.id}>
-// {/* Title Name */}
-// </div>
-// </div>
+// {this.props.searchRecipe.map((item) =>{
+//   return (<div className="recipeItem" id="2">
+//       <button className="btn btn-outline-secondary" onClick={() => this.setToggle(item.id)} onMouseEnter={() => this.setHover(true, item.id)} onMouseLeave={() => this.setHover(false, item.id)}>
+//       {this.state.hover && (item.id === this.state.currentId) && <h1 className="recipeTitle">{item.name}</h1>}
+//       <img className="recipeImg" src= {item.img} alt="test"/>
+//       </button>
+//       </div>)
+// })}

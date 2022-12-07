@@ -8,18 +8,18 @@
 
 
 .TitleRecipe{
-    font-size: calc(10px + 4.5vmin);
+    font-size: calc(10px + 2.5vmin);
 }
 
-.recipeImg{
+.ingredientsRecipeImg{
     height: auto;
-    max-width: 100%;
+    max-width: 80%;
     border-radius: 10%;
 
 }
 
 .subHeader{
-    font-size: calc(10px + 4vmin);
+    font-size: calc(10px + 2.5vmin);
 }
 
 .backButton{
@@ -43,4 +43,5 @@
 }
 .list-group-item{
 background-color: #d6ba9b;
+font-size: calc(10px + 1vmin);
 }
