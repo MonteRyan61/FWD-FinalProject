@@ -1,11 +1,10 @@
 html, body{
   background-color: #C6AC8F;
-  margin:2%;
+  margin:3%;
 }
 
 
 .Main-Container{
-  flex: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: rgb(2, 2, 2);  margin: 0;
@@ -40,10 +39,20 @@ background-color: #C6AC8F;
   font-family: 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
   }
 
+  .third-header{
+    align-items: center;
+    font-size: calc(10px + 1vw);
+    color: rgb(2, 2, 2);  
+    margin: 0;
+    padding: 0;
+  font-family: 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    text-decoration: none;
+  }
 
 
 

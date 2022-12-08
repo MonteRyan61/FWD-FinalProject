@@ -7,7 +7,7 @@ export default class form extends React.Component{
 
         this.state = {
             name: '',
-            exists: "Showing Results For: "
+            exists: "Please Type in the name of a Food or Beverage"
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -41,7 +41,7 @@ export default class form extends React.Component{
             if(this.state.name === "")
             {
                 this.setState({
-                    exists: "Please Type in a Food Category"
+                    exists: "Please Type in a Food or Beverage Category"
                 })
                 return
             }
@@ -88,7 +88,7 @@ export default class form extends React.Component{
             <div>
             <form onSubmit={this.handleSubmit}>
                 <label htmlFor="fullName" className="second-header">
-                    What are you hungry for?
+                    Hungry or Thirsty?
                 </label>
                 <br></br>
                 <label>
@@ -96,7 +96,7 @@ export default class form extends React.Component{
                 </label>
                 <input type="submit" value="Search"/>
             </form>
-            <h2 className="second-header">{this.state.exists} {this.props.lastSearch}</h2>
+            <h2 className="third-header">{this.state.exists} {this.props.lastSearch}</h2>
             </div>
 
         );
