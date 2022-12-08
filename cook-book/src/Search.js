@@ -82,6 +82,7 @@ export default class form extends React.Component{
         this.props.showing(this.state.name)
     }
 
+
     render(){
 
         return(
@@ -96,7 +97,7 @@ export default class form extends React.Component{
                 </label>
                 <input type="submit" value="Search"/>
             </form>
-            <h2 className="third-header">{this.state.exists} {this.props.lastSearch}</h2>
+            <h2 className="third-header">{this.state.exists} <br></br>{this.props.lastSearch}</h2>
             </div>
 
         );

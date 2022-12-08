@@ -1,5 +1,5 @@
 html, body{
-  background-color: #000000;
+  background-color: #151515;
   margin:3%;
 }
 
@@ -13,14 +13,14 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   sans-serif;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
-background-color: #000000;
+background-color: #151515;
 }
 
 
   .Main-header {
     align-items: center;
     font-size: calc(10px + 6vw);
-    background-color: black;  
+    background-color: #151515;  
     color:white;
     margin: 0;
     padding: 0;
@@ -34,7 +34,7 @@ background-color: #000000;
   .second-header{
     align-items: center;
     font-size: calc(10px + 2vw);
-    background-color: black;  
+    background-color: #151515;  
     color:white; 
     margin: 0;
     padding: 0;
@@ -47,7 +47,7 @@ background-color: #000000;
   .third-header{
     align-items: center;
     font-size: calc(10px + 1vw);
-    background-color: black;  
+    background-color: #151515;  
     color:white;  
     margin: 0;
     padding: 0;
