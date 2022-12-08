@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FWD-FinalProject/cook-book/static/css/main.c30d7c05.css",
+    "main.js": "/FWD-FinalProject/cook-book/static/js/main.53cb2fbc.js",
+    "static/js/787.7613f31d.chunk.js": "/FWD-FinalProject/cook-book/static/js/787.7613f31d.chunk.js",
+    "index.html": "/FWD-FinalProject/cook-book/index.html",
+    "main.c30d7c05.css.map": "/FWD-FinalProject/cook-book/static/css/main.c30d7c05.css.map",
+    "main.53cb2fbc.js.map": "/FWD-FinalProject/cook-book/static/js/main.53cb2fbc.js.map",
+    "787.7613f31d.chunk.js.map": "/FWD-FinalProject/cook-book/static/js/787.7613f31d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c30d7c05.css",
+    "static/js/main.53cb2fbc.js"
+  ]
+}
