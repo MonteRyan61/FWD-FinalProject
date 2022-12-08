@@ -7,7 +7,7 @@ export default class form extends React.Component{
 
         this.state = {
             name: '',
-            exists: "Please Type in the name of a Food or Beverage"
+            exists: "Type in the name of a Food or Beverage"
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -28,7 +28,7 @@ export default class form extends React.Component{
         let data = await response.json()
         console.log(data)
         this.useApiData(data)
-      }
+    }
     
 
     //We want to populate our list that populates cooking titles here. This will just be parsing the info we get back from the request

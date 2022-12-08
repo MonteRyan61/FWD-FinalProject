@@ -40,7 +40,6 @@ export default class form extends React.Component{
             <h2 className="subHeader">Ingredients</h2>
             <ul className="list-group">
             {/* This is no longer a list so we need to parse it again to get the list form back better than dealing with object */}
-            {console.log(this.props.listOfIngredients[this.props.index].split(","))}
             {this.props.listOfIngredients[this.props.index].split("*").map((data, idx) => {
                 // Need to skip over the name and image in the list as the ingredients will be blank there 
                 //Must parse the comma on the front if not the first item alot of 
@@ -55,7 +54,7 @@ export default class form extends React.Component{
                 return (<li className="list-group-item" key={idx}><input class="form-check-input me-1" type="checkbox" value=""/> {ingredient}</li>)
             })}
             </ul>
-            {console.log("Source List: " +this.props.sourceList)}
+            {console.log("Source List: " + this.props.sourceList)}
             <a class="btn btn-outline-secondary" id="btn-outline-secondary-link" target="_blank" rel="noreferrer" href={this.props.sourceList[this.props.index]} role="button"><h2 className="subHeader">Source</h2></a>
             </div>
         );

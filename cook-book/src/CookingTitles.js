@@ -12,7 +12,6 @@ constructor() {
             recipeTitlesAndImages : []
         }
 
-
         this.setHover = this.setHover.bind(this);
         this.setToggle = this.setToggle.bind(this);
     }
@@ -68,7 +67,6 @@ constructor() {
                 })}
               </div>
             </div>
-            
         )
     }
 }
