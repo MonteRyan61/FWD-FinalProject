@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/FWD-FinalProject/cook-book/static/css/main.c30d7c05.css",
-    "main.js": "/FWD-FinalProject/cook-book/static/js/main.53cb2fbc.js",
-    "static/js/787.7613f31d.chunk.js": "/FWD-FinalProject/cook-book/static/js/787.7613f31d.chunk.js",
-    "index.html": "/FWD-FinalProject/cook-book/index.html",
-    "main.c30d7c05.css.map": "/FWD-FinalProject/cook-book/static/css/main.c30d7c05.css.map",
-    "main.53cb2fbc.js.map": "/FWD-FinalProject/cook-book/static/js/main.53cb2fbc.js.map",
-    "787.7613f31d.chunk.js.map": "/FWD-FinalProject/cook-book/static/js/787.7613f31d.chunk.js.map"
+    "main.css": "/FWD-FinalProject/static/css/main.c30d7c05.css",
+    "main.js": "/FWD-FinalProject/static/js/main.cf7d103d.js",
+    "static/js/787.7613f31d.chunk.js": "/FWD-FinalProject/static/js/787.7613f31d.chunk.js",
+    "index.html": "/FWD-FinalProject/index.html",
+    "main.c30d7c05.css.map": "/FWD-FinalProject/static/css/main.c30d7c05.css.map",
+    "main.cf7d103d.js.map": "/FWD-FinalProject/static/js/main.cf7d103d.js.map",
+    "787.7613f31d.chunk.js.map": "/FWD-FinalProject/static/js/787.7613f31d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c30d7c05.css",
-    "static/js/main.53cb2fbc.js"
+    "static/js/main.cf7d103d.js"
   ]
 }
