@@ -44,4 +44,5 @@
 .list-group-item{
 background-color: #d6ba9b;
 font-size: calc(10px + 1vmin);
+text-align: left;
 }

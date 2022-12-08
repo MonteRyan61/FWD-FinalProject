@@ -1,11 +1,13 @@
 import React from "react";
+import './MainContainer.css';
 
 export default class form extends React.Component{
     constructor(props){
         super(props);
 
         this.state = {
-            name: 'Steak'
+            name: '',
+            exists: "Showing Results For: "
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -33,20 +35,29 @@ export default class form extends React.Component{
     useApiData(data){
         //We need to populate the new data for each of the hits in the API
         let build = []
+        //check to make sure we got some data if we got none back from the search then we want to change the state of the output message
+        if(data.hits.length === 0)
+        {
+            console.log("Doesn't Exist")
+            this.setState({
+                exists: "No Results For: "
+            })
+            return
+        }
+        //Reset the message as we know have data for a search
+        this.setState({
+            exists: "Showing Results For: "
+        })
         for(let i = 0; i < data.hits.length; i++)
         {
             for(let j = 0; j < data.hits[i].recipe.ingredientLines.length; j++)
             {
                 data.hits[i].recipe.ingredientLines[j] += "*"
-                console.log(data.hits[i].recipe.ingredientLines[j])
             }
-            console.log(data.hits[i].recipe.label)
-            // build.push(`"name" : ${data.hits[i].recipe.label}`)
-            let Appender = {"name":`${data.hits[i].recipe.label}`, "img":`${data.hits[i].recipe.image}`, "ingredients": `${data.hits[i].recipe.ingredientLines}`}
-            build.push(Appender)
-            // build = [...build, [{"name":`${data.hits[i].recipe.label}`, "img":`${data.hits[i].recipe.image}`, "id": `${i}`}]]
+            console.log("URL FOR " + i + " " + data.hits[i].recipe.url)
+            let appenderObject = {"name":`${data.hits[i].recipe.label}`, "img":`${data.hits[i].recipe.image}`, "ingredients": `${data.hits[i].recipe.ingredientLines}`, "source": `${data.hits[i].recipe.url}`}
+            build.push(appenderObject)
         }
-        console.log("Build Here" + build[0].ingredients)
         this.props.searchTitleCallback(build)
     }
     
@@ -58,13 +69,10 @@ export default class form extends React.Component{
     }
 
     handleSubmit(event){
-        alert('Searching for: ' + this.state.name);
-        console.log(this.state.recipeTitlesAndImages)
         event.preventDefault();
-        console.log(this.state.recipeTitlesAndImages)
         this.sendAPIRequest();
         //after the submit and we have the state changed to the data from the api we want to send that back to the parent so we can send it over to cooking titles to be used
-        
+        this.props.showing(this.state.name)
     }
 
     render(){
@@ -72,16 +80,16 @@ export default class form extends React.Component{
         return(
             <div>
             <form onSubmit={this.handleSubmit}>
-                <label htmlFor="fullName">
+                <label htmlFor="fullName" className="second-header">
                     What are you hungry for?
                 </label>
                 <br></br>
                 <label>
-                    
                     <input name="name" id="fullName" type="text" onChange={this.handleChange} value={this.state.name} />
                 </label>
-                <input type="submit"/>
+                <input type="submit" value="Search"/>
             </form>
+            <h2 className="second-header">{this.state.exists} {this.props.lastSearch}</h2>
             </div>
 
         );

@@ -49,9 +49,14 @@ export default class form extends React.Component{
                 {
                     ingredient = (ingredient.substring(1, ingredient.length))
                 }
-                return (<li className="list-group-item" key={idx}>{ingredient}</li>)
+                //Have a empty list item being output at the end
+                if(ingredient === "")
+                {return("")}
+                return (<li className="list-group-item" key={idx}><input class="form-check-input me-1" type="checkbox" value=""/> {ingredient}</li>)
             })}
             </ul>
+            {console.log("Source List: " +this.props.sourceList)}
+            <a target="_blank" href={this.props.sourceList[this.props.index]} rel="noreferrer"><h2 className="subHeader">Source</h2></a>
             </div>
         );
     }

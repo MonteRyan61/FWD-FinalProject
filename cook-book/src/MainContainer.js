@@ -11,6 +11,7 @@ export default class MainContainer extends React.Component{
         this.state = {
             Header: 'College Cook',
             toggle: true,
+            showing: "Steak",
             searchArray: [],
 
             // Start off on a default search of steak
@@ -28,8 +29,19 @@ export default class MainContainer extends React.Component{
                 "https://edamam-product-images.s3.amazonaws.com/web-img/f35/f35a82bc580570f60c34c4d7e57c22f8?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEA4aCXVzLWVhc3QtMSJHMEUCIHYvtDmO%2FqQAsvsTVWBLpwHQ6vnRMSdryadgx059xcF%2FAiEAzhhega2LZ8LXoEYg5HCekdZ9WD5PYkSREFQIhe1dLGsqzAQINxAAGgwxODcwMTcxNTA5ODYiDGNZ%2FILmCRXqKYst8iqpBDdTCtAHVkwuubv0kmTU3PB8dPg9JOcbiHm3PrOYBZjMWJNVKORMX1dwba3tEFNJM7b%2BFjTs5llMl8585SWQ%2BiF7JrPGUv%2FkIlsaAN7xCqmpM%2BVoPYBjNVtni8A0mft%2BOCYtPplxTpnKL7W2frdGNS2pQPovzhPJorw8V8s2SnTxboXW5O91r%2BK0o%2Ftd0U6UoGQZlAf0c%2BGzinMAFTv3XIztz26vdaN6somF%2BEFeN9JTNlUWBYI5MdxbGTTq2sRXhJIwT%2FjNbHSapb2jlT6Fr%2Bt%2BPG2FWKvyC4qSUpX8hSicHEiS%2B6s2erXblrwihzXKZsE%2BfxT92rkQuNmasRviJ2StsfAXUKmmNEYGQRirUK5OjwOAmX0aP5ecf9bzN%2BcGYNjWCdg%2Fk4bLc1xNTOVDuoTz6U6SjFu6i1ATExqvNZbiqjXIaCiyc9XjBnYkBRmQoOUEQTyPveqVId2frbvHbANJLRlcJ1enyUO4eZfXegzi6GCUHafn0a81rxvBzSYLQFnhNq1vJWwFk2DcywBkOtId8e8vG1y%2BWzXdMQPpMpragos%2FLgN87dvVmTiP%2Fq6Kp%2Bf3VdU1%2F4FE5ps9Am%2Fkr142C0bEKHe8km6atjtyDjF8FNx9HA3HnIdaVSoMCsGSrVZm%2FT5bPGWF%2FfGNTGD7r04vf3yU8V21AjCr%2Bc8IMeM7t%2Bl8J2chIO9vhQ1CikcEch5LiWYdSKWnhucfMbjUsPhb57z17O%2BfcOUwu5XEnAY6qQEJ31Mj55Urh8jhva6%2FqcM45M8C90b85j7W9BN%2FacKo4KpaI3geqMVCUQCmKA7tU%2BaQrMAD6f24wHDYUnvyWO87Fg4oKnYEGuRPYHiKE4AUU9aBM4gs3PLRiykb%2BE3a7uuNBaoItXWCPZDlwKUo7ZYJljhtsAr10r%2FmqxOxl3Qo8K6RK9iLaiNh7m7Vt%2BQNR2xbhp4bZOqRj%2BkdFfDqPMp1oKDvETK%2BmWKC&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20221207T223205Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFEVIBZUYH%2F20221207%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=939d4757777a7a1e5923abc76d05bfa06f9be5ebc6ec5cc9111241e8f6370cdc"
             ],
             listIngredients: ['5 to 6 ounces skirt steak or hanger steak*,Salt*,Mild-tasting olive oil, to coat, or as needed*', '1 1/2 pound skirt steak, cut into 4 pieces*,Salt*,Pepper*', '1 inch-thick boneless shell steak*,Olive oil*,Coarse salt and freshly ground pepper*', '1 lb Sirloin Steak (without Much Gristle) OR Pre-c…resh Ground Black Pepper To Taste*,2 tbsp Butter*', '2 x 200g rump steak about 2-3cm thick*,1 tbsp sunf…ashed once*,1 sprig thyme or rosemary (optional)*', '1/3 cup mirin rice wine*,1/3 cup sake*,1/3 cup soy…/2 to 2 lb flank steak or skirt steak*,olive oil*', '2”-thick Porterhouse steak, trimmed (about 2 lb.)*…round black pepper*,kosher salt*,unsalted butter*', '4 tablespoons fish sauce*,2 tablespoons brown suga…rt or flap steak*,1 tablespoon butter (optional)*', '2 tbsp. butter*,3 cloves garlic, peeled and crushe… olive oil*,1 tbsp. finely chopped curly parsley*', '1 (16-ounce) New York strip steak, at room tempera…,1 garlic clove, crushed*,2 springs sprigs thyme*'],
+            listSources: [
+                "http://www.cookstr.com/recipes/skirt-steak-and-hanger-steak",
+                "https://www.epicurious.com/recipes/food/views/salt-and-pepper-steak-51236360",
+                "https://www.marthastewart.com/315499/pan-fried-steak",
+                "http://thepioneerwoman.com/cooking/2009/01/steak-bites/",
+                "https://www.bbcgoodfood.com/recipes/rump-steak",
+                "http://www.simplyrecipes.com/recipes/steak_teriyaki/",
+                "http://www.bonappetit.com/recipe/perfect-porterhouse-steak",
+                "https://food52.com/recipes/34678-vietnamese-sugar-steak",
+                "http://www.saveur.com/article/Recipes/Panfried-Flank-Steak",
+                "https://www.latimes.com/recipe/sous-vide-steak",
+            ],
             currRecipe: "",
-            newValue: "Test",
         
         };
     }
@@ -45,6 +57,11 @@ export default class MainContainer extends React.Component{
         this.setState({currRecipe: childData1})
     }
 
+    handleShowing = (searchedForInSearch) =>{
+        // takes in current recipe as a parameter for the toggle
+        this.setState({showing: searchedForInSearch})
+    }
+
     // gets the array of recipes from search which does the api request
     getSearchTitles = (searchArray) =>{
         // Gets the list of recipes that was search for
@@ -53,16 +70,19 @@ export default class MainContainer extends React.Component{
         let buildListOfNames = []
         let buildListOfImg = []
         let buildListOfIngredient = []
+        let buildListOfSources = []
         for(let i = 0; i < searchArray.length; i++)
         {
             buildListOfNames.push(searchArray[i].name)
             buildListOfImg.push(searchArray[i].img)
             buildListOfIngredient.push(searchArray[i].ingredients)
+            buildListOfSources.push(searchArray[i].source)
         }
         this.setState({
             listRecipes: buildListOfNames,
             listImages: buildListOfImg,
             listIngredients: buildListOfIngredient,
+            listSources: buildListOfSources,
         })
     }
 
@@ -74,10 +94,23 @@ export default class MainContainer extends React.Component{
         <div className="Main-Container">
             <h1 className="Main-header">{this.state.Header}</h1>
             {/* The main toggle here will be set in the cooking titles component if one is clicked it will pass which was clicked and change the state here for a reload to hide the search and cooking titles and show ingredients. */}
-            {this.state.toggle && <Search searchTitleCallback = {this.getSearchTitles}></Search>}
+            {this.state.toggle && <Search showing = {this.handleShowing} searchTitleCallback = {this.getSearchTitles} lastSearch = {this.state.showing} ></Search>}
             {/* {console.log("Recipe Titles " + this.state.listRecipes +" Recipe Images " + this.state.listImages )} */}
-            {this.state.toggle && <CookingTitles searchRecipe = {this.state.listRecipes} searchImg = {this.state.listImages} currRecipeCallback = {this.handleCurrRecipeCallback} parentCallback = {this.handleToggleCallback}></CookingTitles>}
-            {!this.state.toggle && <Ingredents index = {this.state.currRecipe} searchImg = {this.state.listImages} searchRecipe = {this.state.listRecipes} listOfIngredients = {this.state.listIngredients} parentCallback = {this.handleToggleCallback}></Ingredents>}
+            {this.state.toggle && <CookingTitles 
+                    searchRecipe = {this.state.listRecipes} 
+                    searchImg = {this.state.listImages} 
+                    currRecipeCallback = {this.handleCurrRecipeCallback} 
+                    parentCallback = {this.handleToggleCallback}>
+            </CookingTitles>}
+            
+            
+            {!this.state.toggle && <Ingredents index = {this.state.currRecipe} 
+                    sourceList = {this.state.listSources} 
+                    searchImg = {this.state.listImages} 
+                    searchRecipe = {this.state.listRecipes} 
+                    listOfIngredients = {this.state.listIngredients} 
+                    parentCallback = {this.handleToggleCallback}>
+            </Ingredents>}
         </div>
         );
     }
