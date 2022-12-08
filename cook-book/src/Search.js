@@ -38,6 +38,13 @@ export default class form extends React.Component{
         //check to make sure we got some data if we got none back from the search then we want to change the state of the output message
         if(data.hits.length === 0)
         {
+            if(this.state.name === "")
+            {
+                this.setState({
+                    exists: "Please Type in a Food Category"
+                })
+                return
+            }
             console.log("Doesn't Exist")
             this.setState({
                 exists: "No Results For: "

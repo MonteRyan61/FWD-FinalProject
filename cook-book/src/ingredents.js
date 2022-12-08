@@ -56,7 +56,7 @@ export default class form extends React.Component{
             })}
             </ul>
             {console.log("Source List: " +this.props.sourceList)}
-            <a target="_blank" href={this.props.sourceList[this.props.index]} rel="noreferrer"><h2 className="subHeader">Source</h2></a>
+            <a class="btn btn-outline-secondary" id="btn-outline-secondary-link" target="_blank" rel="noreferrer" href={this.props.sourceList[this.props.index]} role="button"><h2 className="subHeader">Source</h2></a>
             </div>
         );
     }

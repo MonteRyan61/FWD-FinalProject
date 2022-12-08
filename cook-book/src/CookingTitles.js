@@ -61,7 +61,7 @@ constructor() {
                   const recipeImage = this.props.searchImg[index];
                   return (<div className="recipeItem" id={index}>
                       <button className="btn btn-outline-secondary" onClick={() => this.setToggle(index)} onMouseEnter={() => this.setHover(true, index)} onMouseLeave={() => this.setHover(false, index)}>
-                      {this.state.hover && (index === this.state.currentId) && <h1 className="recipeTitle">{recipeTitle}</h1>}
+                      {this.state.hover && (index === this.state.currentId) && <h1 className="recipeTitle" onClick={() => this.setToggle(index)} onMouseEnter={() => this.setHover(true, index)}>{recipeTitle}</h1>}
                       <img className="recipeImg" src= {recipeImage} alt="test"/>
                       </button>
                       </div>)
